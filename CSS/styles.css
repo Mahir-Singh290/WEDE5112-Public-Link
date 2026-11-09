@@ -1,0 +1,436 @@
+/* CSS RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1E293B;
+    background-color: #f8fafc;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Logo */
+
+/*https://www.w3schools.com/cssref/css3_pr_border-radius.php*/
+.profile-image{
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    border: 3px solid red
+}
+
+.product-thumb {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+/* Typography Hierarchy */
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h3{
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+h4{
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+p{
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Header */
+header{
+    text-align: center;
+    background-color: #1E293B;
+    color: white;
+    padding: 3rem 1rem;
+}
+
+header p{
+    max-width: 700px;
+    margin: 1rem auto;
+    color: #e2e8f0;
+}
+
+/* Navigation Bar */
+.main-nav{
+    background-color: rgb(129, 2, 2);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav h2{
+    display: none;
+}
+
+.main-nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.main-nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.4rem 0.8rem;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+}
+
+/* Section Styling */
+section{
+    background-color: white;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.05);
+}
+
+section h2{
+    color: #1E293B;
+    margin-bottom: 1rem;
+    border-bottom: 0.15rem solid red;
+    padding-bottom: 0.3rem;
+}
+
+/* Cards & Grid */
+.card{
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,0.04);
+}
+
+
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+
+#products h2{
+    grid-column: 1 / -1;
+}
+
+/* Lists */
+ul, ol{
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+li{
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Form */
+.contact-form{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+
+.contact-form button{
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #16A34A;
+    color: white;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Responsive Map Container */
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 0.5rem;
+}
+
+/* Footer */
+footer{
+    text-align: center;
+    background-color: #0f172a;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+footer a{
+    color: #4ade80;
+    text-decoration: underline;
+}
+
+/* Pseudo-Classes */
+.main-nav a:hover{
+    background-color: black;
+    border-radius: 0.3rem;
+}
+
+.main-nav a:focus{
+    outline: 0.2rem solid #4ade80;
+}
+
+.main-nav a:active{
+    background-color: #166534;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color: #16A34A;
+    outline: 0.15rem solid #bbf7d0;
+}
+
+.contact-form button:hover{
+    background-color: #15803d;
+}
+
+/* Tablet Media Query */
+@media (max-width: 900px){
+    #products,
+    .card-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .main-nav ul{
+        gap: 0.8rem;
+    }
+
+    main{
+        width: 92%;
+    }
+}
+
+/* Mobile Media Query */
+@media(max-width: 600px){
+    body{
+        font-size: 0.95rem;
+    }
+
+    header{
+        padding: 2rem 1rem;
+    }
+
+    .main-nav ul{
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    main{
+        width: 95%;
+        padding: 1rem 0;
+    }
+
+    h1{
+        font-size: 1.8rem;
+    }
+
+    h2{
+        font-size: 1.4rem;
+    }
+
+    .contact-form button{
+        width: 100%;
+    }
+
+    .map-container iframe {
+        height: 250px;
+    }
+}
+
+ .accordion-container {
+            max-width: 700px;
+            margin: 30px auto;
+        }
+
+        .accordion {
+            background-color: #0f172a;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .accordion:hover {
+            background-color: rgb(127, 7, 7);
+        }
+
+        .accordion:active {
+            background-color: #004085;
+        }
+
+        .panel {
+            background-color: white;
+            padding: 0.18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease,
+                padding 0.3s ease;
+        }
+
+        .panel.open {
+            padding: 15px 18px;
+
+        }
+
+        .panel p {
+            line-height: 1.5;
+            color: #333;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        /* Map Design */
+#map{
+    height: 500px;
+    width: 100%;
+
+    border-radius: 12px;
+    border: 3px solid white;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+    /*Enterance Animation*/
+    animation: sildeUp 1s ease-out;
+}
+
+/* Gallery Styling */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery img:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+/* Lightbox Background */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Large Image in Lightbox */
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 5px;
+    animation: zoomin 0.3s ease;
+}
+
+/* Zoom Animation */
+@keyframes zoomin {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #16A34A;
+}

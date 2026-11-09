@@ -1,0 +1,122 @@
+<!--1. HTML5 & SEMANTIC MARKUP ARCHITECTURE:
+       - MDN Web Docs. (2026). HTML: A good basis for accessibility. Mozilla Developer Network. 
+         Retrieved 3rd November, from https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML
+       - W3Schools. (2026). HTML Semantic Elements. W3Schools Online Web Tutorials. 
+         Retrieved 3rd November, from https://www.w3schools.com/html/html5_semantic_elements.asp
+
+    2. CSS LAYOUT, GRID & SHAPE STYLING:
+       - MDN Web Docs. (2026). CSS Grid Layout. Mozilla Developer Network. 
+         Retrieved 3rd November, from https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout
+       - W3Schools. (2026). CSS border-radius Property. W3Schools Online Web Tutorials. 
+         Retrieved 3rd November, from https://www.w3schools.com/cssref/css3_pr_border-radius.php
+
+    3. LIGHTBOX MODAL & EVENT HANDLING (LIGHTBOX.JS):
+       - MDN Web Docs. (2026). Introduction to events. Mozilla Developer Network. 
+         Retrieved 3rd November, from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
+       - MDN Web Docs. (2026). Event: stopPropagation() method. Mozilla Developer Network. 
+         Retrieved 3rd November, from https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation
+       - W3Schools. (2026). How To Create a Lightbox / Modal. W3Schools Online Web Tutorials. 
+         Retrieved 3rd November, from https://www.w3schools.com/howto/howto_js_lightbox.asp
+-->
+
+<!-- 
+    References & Technical Documentation Sources (SEO & Meta Tags):
+    - Mozilla Developer Network. (2026). <meta>: The Metadata element. MDN Web Docs. Retrieved November 3, 2026, from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+    - Open Graph protocol. (2026). The Open Graph protocol specification. Open Graph. Retrieved November 3, 2026, from https://ogp.me/
+    - X Corp. (2026). Getting Started with X Cards. X Developer Platform. Retrieved November 3, 2026, from https://developer.x.com/en/docs/x-for-websites/cards/overview/markup
+    - Google Search Central. (2026). Introduction to robots.txt and Meta Tags. Google for Developers. Retrieved November 3, 2026, from https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    
+    <meta name="description" content="Browse our wide selection of rugged hiking boots, camping gear, backpacks, and weather-resistant apparel built for endurance.">
+    <meta name="keywords" content="hiking boots, camping tents, backpacks, outdoor apparel, waterproof jackets, gear catalog">
+    <meta name="author" content="Cape Union Mart">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags (Social Media) -->
+    <meta property="og:title" content="Cape Union Mart - Product Catalog & Outdoor Gear">
+    <meta property="og:description" content="Shop top-tier footwear, camping gear, and apparel engineered for the trail.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://capeunionmart.co.za/products.html">
+    <meta property="og:image" content="https://capeunionmart.co.za/images/Backpack.jpg">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cape Union Mart - Product Catalog">
+    <meta name="twitter:description" content="Browse our wide selection of rugged hiking boots, camping gear, and apparel.">
+    <meta name="twitter:image" content="https://capeunionmart.co.za/images/Backpack.jpg">
+
+    <title>Cape Union Mart - Products</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Our Products</h1>
+        <p>Equipping you for every trail, peak, and campsite.</p>
+    </header>
+
+    <nav class="main-nav">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="deals.html">Deals</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Explore Outdoor Gear</h2>
+            
+            <!-- Search & Filter Controls -->
+            <div class="filter-controls" style="margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                <input type="text" id="search-input" placeholder="Search products..." style="padding: 0.6rem; flex: 1; min-width: 200px; border: 1px solid #cbd5e1; border-radius: 0.3rem;">
+                
+                <select id="category-filter" style="padding: 0.6rem; border: 1px solid #cbd5e1; border-radius: 0.3rem;">
+                    <option value="all">All Categories</option>
+                    <option value="footwear">Footwear</option>
+                    <option value="gear">Camping Gear</option>
+                    <option value="apparel">Apparel</option>
+                </select>
+
+                <select id="sort-select" style="padding: 0.6rem; border: 1px solid #cbd5e1; border-radius: 0.3rem;">
+                    <option value="name-asc">Sort by Name (A-Z)</option>
+                    <option value="name-desc">Sort by Name (Z-A)</option>
+                    <option value="price-asc">Price (Low to High)</option>
+                    <option value="price-desc">Price (High to Low)</option>
+                </select>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div id="loading-indicator" style="text-align: center; padding: 2rem; font-weight: bold;">
+                Loading products...
+            </div>
+
+            <!-- No Results Message -->
+            <div id="no-results" style="display: none; text-align: center; padding: 2rem; color: #64748b;">
+                No products found matching your search.
+            </div>
+
+            <!-- Dynamic Products Grid -->
+            <div id="products-container" class="card-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cape Union Mart</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="Javascript/products.js"></script>
+</body>
+</html>

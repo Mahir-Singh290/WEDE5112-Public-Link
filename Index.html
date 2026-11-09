@@ -1,0 +1,118 @@
+<!-- 
+    References & Technical Documentation Sources (SEO & Meta Tags):
+    - Mozilla Developer Network. (2026). <meta>: The Metadata element. MDN Web Docs. Retrieved November 3, 2026, from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+    - Open Graph protocol. (2026). The Open Graph protocol specification. Open Graph. Retrieved November 3, 2026, from https://ogp.me/
+    - X Corp. (2026). Getting Started with X Cards. X Developer Platform. Retrieved November 3, 2026, from https://developer.x.com/en/docs/x-for-websites/cards/overview/markup
+    - Google Search Central. (2026). Introduction to robots.txt and Meta Tags. Google for Developers. Retrieved November 3, 2026, from https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    
+    <meta name="description" content="Your ultimate destination for outdoor adventure gear, rugged footwear, camping equipment, and clothing designed for South African conditions.">
+    <meta name="keywords" content="Cape Union Mart, outdoor gear, camping equipment, hiking boots, K-Way jackets, South Africa adventure">
+    <meta name="author" content="Cape Union Mart">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags (Social Media) -->
+    <meta property="og:title" content="Cape Union Mart - Outdoor Adventure Gear & Equipment">
+    <meta property="og:description" content="Explore top-quality outdoor clothing, tough boots, and camping gear for South African adventures.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://capeunionmart.co.za/">
+    <meta property="og:image" content="https://capeunionmart.co.za/images/CapeUnionMart.jpg">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cape Union Mart - Outdoor Adventure Gear">
+    <meta name="twitter:description" content="Your ultimate destination for outdoor adventure gear and equipment.">
+    <meta name="twitter:image" content="https://capeunionmart.co.za/images/CapeUnionMart.jpg">
+    <title>Cape Union Mart - Home</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+    <!-- Header & Logo -->
+    <header>
+        <h1>Cape Union Mart</h1>
+        <p>Your Ultimate Destination for Outdoor Adventure Gear & Equipment</p>
+        <img src="images/CapeUnionMart.jpg" alt="Cape Union Mart Store" class="profile-image">
+        <!--*https://www.w3schools.com/cssref/css3_pr_border-radius.php*/
+        This link is here beacuse i had made the logo circular which was never done in class i think,
+        because i checked most places where we did profile-image-->
+        
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="deals.html">Deals</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <h2>Welcome to Adventure Awaits</h2>
+        <p>
+            Explore top-quality outdoor clothing, tough boots, camping gear, and proper equipment made for South African adventures.
+        </p>
+        <p>
+             Whether you're hiking up the Drakensberg or heading out for a weekend camp, we've got you sorted.
+        </p>
+
+
+        <section id="featured">
+            <h2>Featured Categories</h2>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>Footwear</h3>
+                    <img src="images/Shoe.jpg" alt="Shoe image" width="220" onclick="openLightbox(this.src)">
+                    <p>Rugged hiking boots and trail shoes built for endurance.</p>
+                    <p><a href="products.html">Shop Footwear</a></p>
+                </article>
+                
+                <article class="card">
+                    <h3>Clothing & Jackets</h3>
+                    <img src="images/kwayjacket.avif" alt="Jacket image" width="220" onclick="openLightbox(this.src)">
+                    <p>Weather-resistant fleece jackets, thermal shirts, and outdoor wear.</p>
+                    <p><a href="products.html">Shop clothing</a></p>
+                </article>
+                
+                <article class="card">
+                    <h3>Camping & Gear</h3>
+                    <img src="images/Backpack.jpg" alt="Backpack image" width="220" onclick="openLightbox(this.src)">
+                    <p>Durable tents, backpacks, and GPS watches for the wild.</p>
+                    <p><a href="products.html">Shop Gear</a></p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Container -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged Image" onclick="closeLightBox()">
+        <!-- Close button -->
+        <button class="close" type="button" aria-label="close image" onclick="closeLightBox()">&times;</button>
+        <!-- Enlarge image -->
+        <img id="lightboxImage" src="" alt="Enlarge Image" onclick="event.stopPropagation()">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Cape Union Mart. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Link -->
+    <script src="Javascript/lightbox.js"></script>
+
+</body>
+</html>

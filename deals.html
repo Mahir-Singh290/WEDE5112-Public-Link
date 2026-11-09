@@ -1,0 +1,111 @@
+<!-- 
+    References & Technical Documentation Sources (SEO & Meta Tags):
+    - Mozilla Developer Network. (2026). <meta>: The Metadata element. MDN Web Docs. Retrieved November 3, 2026, from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+    - Open Graph protocol. (2026). The Open Graph protocol specification. Open Graph. Retrieved November 3, 2026, from https://ogp.me/
+    - X Corp. (2026). Getting Started with X Cards. X Developer Platform. Retrieved November 3, 2026, from https://developer.x.com/en/docs/x-for-websites/cards/overview/markup
+    - Google Search Central. (2026). Introduction to robots.txt and Meta Tags. Google for Developers. Retrieved November 3, 2026, from https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+   
+    <meta name="description" content="Save big on top outdoor equipment, winter fleece jackets, tent bundles, and seasonal clearance items at Cape Union Mart.">
+    <meta name="keywords" content="outdoor sales, special deals, fleece jacket specials, camping bundle deals, clearance gear">
+    <meta name="author" content="Cape Union Mart">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags (Social Media) -->
+    <meta property="og:title" content="Cape Union Mart - Special Deals & Promotions">
+    <meta property="og:description" content="Save big on top outdoor equipment, apparel, and seasonal clearance items.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://capeunionmart.co.za/deals.html">
+    <meta property="og:image" content="https://capeunionmart.co.za/images/menjacket.jpg">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cape Union Mart - Special Deals">
+    <meta name="twitter:description" content="Save big on top outdoor equipment and seasonal clearance items.">
+    <meta name="twitter:image" content="https://capeunionmart.co.za/images/menjacket.jpg">
+    <title>Cape Union Mart - Special Deals</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Special Deals & Promotions</h1>
+        <p>Save big on top outdoor equipment, apparel, and seasonal clearance items.</p>
+    </header>
+
+    <nav class="main-nav">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="deals.html">Deals</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="products">
+            <h2>Current Promotional Offers</h2>
+
+            <article class="card">
+                <img src="images/menjacket.jpg" alt="Men's Fleece Jacket" width="290" onclick="openLightbox(this.src)">
+                <h3>Men's Winter Fleece Jacket</h3>
+                <p>Stay warm on chilly morning hikes with our high-performance fleece.</p>
+                <p><strong>Was:</strong> <span style="color:red;font-weight: bold;" >R1,299.00</span></p>
+                <p><strong>Deal Price:</strong> <span style="color: #16A34A; font-weight: bold;">R974.25 (25% Off)</span></p>
+                <p><a href="products.html">Claim Deal</a></p>
+            </article>
+
+            <article class="card">
+                <img src="images/womanfleece.jpg" alt="Women's Fleece Jacket" width="290" onclick="openLightbox(this.src)">
+                <h3>Women's Fleece Jacket</h3>
+                <p>Lightweight thermal insulation engineered for maximum outdoor comfort.</p>
+                <p><strong>Was:</strong> <span style="color:red;font-weight: bold;">R1,299.00</span></p>
+                <p><strong>Deal Price:</strong> <span style="color: #16A34A; font-weight: bold;">R974.25 (25% Off)</span></p>
+                <p><a href="products.html">Claim Deal</a></p>
+            </article>
+
+            <article class="card">
+                <img src="images/Tent.jpg" alt="Camping Tent Bundle" width="290" onclick="openLightbox(this.src)">
+                <h3>4-Person Dome Tent Bundle</h3>
+                <p>Purchase any 4-person tent and receive a free self-inflating air mattress.</p>
+                <p><strong>Deal Price:</strong> <span style="color: #16A34A; font-weight: bold;">R3,199.00 (Free Mattress Included)</span></p>
+                <p><a href="products.html">Claim Bundle</a></p>
+            </article>
+
+            <article class="card">
+                <img src="images/cookingsystem.jpg" alt="Camping Cooking System" width="290" onclick="openLightbox(this.src)">
+                <h3>Portable Camping Cooking System</h3>
+                <p>Compact gas stove and cookware set for quick trailside meals.</p>
+                <p><strong>Was:</strong> <span style="color:red;font-weight: bold;">R899.00</span></p>
+                <p><strong>Deal Price:</strong> <span style="color: #16A34A; font-weight: bold;">R699.00 (Save R200)</span></p>
+                <p><a href="products.html">Claim Deal</a></p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Lightbox Container -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged Image" onclick="closeLightBox()">
+        <!-- Close Button -->
+        <button class="close" type="button" aria-label="close image" onclick="closeLightBox()">&times;</button>
+        <!-- Enlarge Image -->
+        <img id="lightboxImage" src="" alt="Enlarged Deal Image" onclick="event.stopPropagation()">
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Cape Union Mart</p>
+    </footer>
+
+    <!-- JavaScript Link -->
+    <script src="Javascript/lightbox.js"></script>
+
+</body>
+</html>

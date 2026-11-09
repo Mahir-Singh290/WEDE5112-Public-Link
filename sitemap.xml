@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <url>
+    <!-- The main webpage URL -->
+    <loc>https://capeunionmart.co.za/products.html</loc>
+    
+    <!-- Image 1 attached to this page -->
+    <image:image>
+      <image:loc>https://capeunionmart.co.za/images/sitemap.jpg</image:loc>
+      <image:caption>sitemap of entire website</image:caption>
+      <image:title>Cape Union Mart sitemap/image:</title>
+    </image:image>
+    
+  </url>
+</urlset>
